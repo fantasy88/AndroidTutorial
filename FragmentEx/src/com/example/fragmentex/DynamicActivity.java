@@ -13,13 +13,16 @@ public class DynamicActivity extends Activity implements FragmentCoordinator{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dynamic);
         
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
-        ListContentFragment listContentFragment = new ListContentFragment();
-        DetailsContentFragment detailsContentFragment = new DetailsContentFragment();
-        transaction.add(R.id.listContainer, listContentFragment,"listContent");
-        transaction.add(R.id.detailsContainer, detailsContentFragment,"detailsContent");
-        transaction.commit();
+        if(savedInstanceState == null)
+        {
+            FragmentManager fragmentManager = getFragmentManager();
+            FragmentTransaction transaction = fragmentManager.beginTransaction();
+            ListContentFragment listContentFragment = new ListContentFragment();
+            DetailsContentFragment detailsContentFragment = new DetailsContentFragment();
+            transaction.add(R.id.listContainer, listContentFragment,"listContent");
+            transaction.add(R.id.detailsContainer, detailsContentFragment,"detailsContent");
+            transaction.commit();
+        }
         
     }
 
