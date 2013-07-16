@@ -1,0 +1,41 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/btnShowCalendar"
+        android:icon="@drawable/calendar"
+        android:orderInCategory="100"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/btnCalendar"/>
+    <item
+        android:id="@+id/btnExit"
+        android:icon="@drawable/exit"
+        android:orderInCategory="200"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/exit">
+    </item>
+    <item
+        android:id="@+id/btnSubMenu"
+        android:orderInCategory="300"
+        android:icon="@drawable/ic_action_overflow"
+        android:showAsAction="always"
+        android:title="@string/hello_world">
+        <menu>
+            <item
+                android:id="@+id/create_new"
+                android:title="@string/btnNew"/>
+            
+            <item
+                android:id="@+id/showListCalendar"
+                android:title="@string/listCalendar"/>
+            
+            <item
+                android:id="@+id/find_calendar"
+                android:title="@string/findCalendar"/>
+            
+            <item
+                android:id="@+id/showListEvents"
+                android:title="@string/listEvents"/>
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEventActivity" >
+
+    <EditText
+        android:id="@+id/edtTitle"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:hint="@string/title" />
+
+    <EditText
+        android:id="@+id/edtLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtTitle"
+        android:layout_below="@+id/edtTitle"
+        android:ems="10"
+        android:hint="@string/location" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtLocation"
+        android:layout_below="@+id/edtLocation"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="@string/description"
+        android:lines="5"
+        android:minLines="3"
+        android:singleLine="false" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear1"
+        android:layout_alignLeft="@+id/edtDescription"
+        android:layout_below="@+id/edtDescription" >
+
+        <EditText
+            android:id="@+id/edtStartDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:ems="10"
+            android:focusable="false"
+            android:onClick="showChoiceStartDate"
+            android:hint="@string/startDate"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edtStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:focusable="false"
+            android:onClick="showChoiceStartTime"
+            android:ems="10"
+            android:hint="@string/startTime"
+            android:inputType="time" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/linear2"
+        android:layout_alignLeft="@+id/linear1"
+        android:layout_below="@+id/linear1" >
+
+        <EditText
+            android:id="@+id/edtEndDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:focusable="false"
+            android:onClick="showChoiceEndDate"
+            android:ems="10"
+            android:hint="@string/endDate"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/edtEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:focusable="false"
+            android:onClick="showChoiceEndTime"
+            android:ems="10"
+            android:hint="@string/endTime"
+            android:inputType="time" />
+
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/edtList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linear2"
+        android:layout_below="@+id/linear2"
+        android:ems="10"
+        android:gravity="top|left"
+        android:hint="@string/listEmail"
+        android:lines="5"
+        android:minLines="3"
+        android:singleLine="false"
+        android:text="@string/empty" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNewEvent"
+        android:layout_alignLeft="@+id/edtList"
+        android:layout_below="@+id/edtList"
+        android:text="@string/create" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="cancelNewEvent"
+        android:layout_alignBaseline="@+id/btnCreate"
+        android:layout_alignBottom="@+id/btnCreate"
+        android:layout_toRightOf="@+id/btnCreate"
+        android:text="@string/cancel" />
+
+</RelativeLayout>
