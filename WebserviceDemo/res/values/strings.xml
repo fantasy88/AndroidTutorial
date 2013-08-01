@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WebserviceDemo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btnPHP">JSON WITH PHP</string>
+    <string name="btnKSoap">Working With KSOAP</string>
+    <string name="btnRest">Working With Rest</string>
+    <string name="title_activity_get_all_products">GetAllProducts</string>
+    <string name="title_activity_json">JSonActivity</string>
+    <string name="btnGetAll">Get All Products</string>
+    <string name="btnCreateNew">Create New</string>
+    <string name="title_activity_add_new">AddNew</string>
+    <string name="lbProductName">Product Name</string>
+    <string name="lbPrice">Cost</string>
+    <string name="lbDescription">Description</string>
+    <string name="btnCreate">Create New</string>
+    <string name="title_activity_edit_product">EditProduct</string>
+    <string name="btnUpdate">Update</string>
+    <string name="btnDelete">Delete</string>
+
+</resources>

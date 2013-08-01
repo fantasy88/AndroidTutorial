@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".EditProduct" >
+
+    <TextView
+        android:id="@+id/lbProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lbProductName"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/edtProductName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbProductName"
+        android:layout_below="@+id/lbProductName"
+        android:hint=""
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/lbPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/edtProductName"
+        android:layout_below="@+id/edtProductName"
+        android:text="@string/lbPrice" />
+
+    <EditText
+        android:id="@+id/edtPrice"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbPrice"
+        android:layout_below="@+id/lbPrice"
+        android:hint=""
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/lbDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/edtPrice"
+        android:layout_below="@+id/edtPrice"
+        android:text="@string/lbDescription" />
+
+    <EditText
+        android:id="@+id/edtDescription"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lbDescription"
+        android:layout_below="@+id/lbDescription"
+        android:lines="3"
+        android:gravity="left|top"
+        android:hint=""
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtDescription"
+        android:layout_below="@+id/edtDescription"
+        android:onClick="onUpdateRecord"
+        android:text="@string/btnUpdate" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edtDescription"
+        android:layout_toRightOf="@+id/btnUpdate"
+        android:onClick="onDeleteRecord"
+        android:text="@string/btnDelete" />
+
+</RelativeLayout>
